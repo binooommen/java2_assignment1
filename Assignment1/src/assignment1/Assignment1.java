@@ -29,7 +29,7 @@ public class Assignment1 {
         }
         else
         {
-            throw new IllegalStateException("");
+            throw new IllegalStateException("ERROR: Time Recieved cannot be null when processing!");
         }
     }
 }

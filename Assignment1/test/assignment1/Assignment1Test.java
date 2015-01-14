@@ -76,7 +76,7 @@ public class Assignment1Test {
         Assignment1 instance = new Assignment1();
         instance.processOrder(o);
         
-        Date expResult = new Date();
+        IllegalStateException expResult = new IllegalStateException("ERROR: Time Recieved cannot be null when processing!");
         Date result = o.getTimeReceived();
         
         assertEquals(expResult, result);
