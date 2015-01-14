@@ -14,6 +14,10 @@ import java.util.List;
  * @author c0641048
  */
 public class Order {
+
+    static void add(Order order) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private int customerId;
     private String customerName;
@@ -82,9 +86,25 @@ public class Order {
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    public Date getTimeProcessed() {
+        return timeProcessed;
+    }
+
+    public void setTimeProcessed(Date timeProcessed) {
+        this.timeProcessed = timeProcessed;
+    }
+
+    public Date getTimeFulfilled() {
+        return timeFulfilled;
+    }
+
+    public void setTimeFulfilled(Date timeFulfilled) {
+        this.timeFulfilled = timeFulfilled;
+    }
+    
+    
     public void addPurchase(Purchase p){
-      listOfPurchase.add(p);
-        
-        
+        listOfPurchase.add(p);
     }
 }
