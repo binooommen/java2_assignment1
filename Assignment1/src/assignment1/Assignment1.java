@@ -43,6 +43,15 @@ public class Assignment1 {
         return orders.getTimeReceived();
     }
     
+    public void newOrderArrives(Order order) throws Exception{
+        if(order.getCustomerId() > 0 && order.getCustomerName() != null ){
+            if(!order.getListOfPurchase().isEmpty()){
+                order.setTimeReceived(new Date());
+            }else{
+                throw new Exception("List of purchase is empty."); 
+            }
+        }else{
+            throw new Exception("Customer id and customer name does not exsist."); 
     public void processOrder(Order o)
     {
         if(o.getTimeReceived() != null)
