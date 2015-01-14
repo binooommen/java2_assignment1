@@ -53,7 +53,24 @@ public class Assignment1Test {
      * Test of processOrder method, of class Assignment1.
      */
     @Test
-    public void testProcessOrder() {
+    public void testProcessWorkingOrder() {
+        System.out.println("processOrder");
+        Order o = new Order(1, "Steve");
+        o.setTimeReceived(new Date());
+        Assignment1 instance = new Assignment1();
+        instance.processOrder(o);
+        
+        Date expResult = new Date();
+        Date result = o.getTimeReceived();
+        
+        assertEquals(expResult, result);
+        
+        System.out.println("Expected Result: " + expResult);
+        System.out.println("Actual Result: " + o.getTimeReceived());
+    }
+    
+    @Test
+    public void testProcessBrokenOrder() {
         System.out.println("processOrder");
         Order o = new Order(1, "Steve");
         Assignment1 instance = new Assignment1();
@@ -67,5 +84,4 @@ public class Assignment1Test {
         System.out.println("Expected Result: " + expResult);
         System.out.println("Actual Result: " + o.getTimeReceived());
     }
-    
 }

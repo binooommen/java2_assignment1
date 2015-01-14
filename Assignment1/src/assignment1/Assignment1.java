@@ -23,7 +23,7 @@ public class Assignment1 {
     
     public void processOrder(Order o)
     {
-        if(o.getTimeReceived() == null)
+        if(o.getTimeReceived() != null)
         {
             o.setTimeReceived(new Date());
         }
