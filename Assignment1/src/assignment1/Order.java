@@ -26,7 +26,6 @@ public class Order {
     private Date timeFulfilled;
     private List<Purchase> listOfPurchase;
     private String notes;
-
     public Order(int customerId, String customerName) {
         this.customerId = customerId;
         this.customerName = customerName;
@@ -56,6 +55,22 @@ public class Order {
         this.timeReceived = timeReceived;
     }
 
+    public Date getTimeProcessed() {
+        return timeProcessed;
+    }
+
+    public void setTimeProcessed(Date timeProcessed) {
+        this.timeProcessed = timeProcessed;
+    }
+
+    public Date getTimeFulfilled() {
+        return timeFulfilled;
+    }
+
+    public void setTimeFulfilled(Date timeFulfilled) {
+        this.timeFulfilled = timeFulfilled;
+    }
+    
     public List<Purchase> getListOfPurchase() {
         return listOfPurchase;
     }
