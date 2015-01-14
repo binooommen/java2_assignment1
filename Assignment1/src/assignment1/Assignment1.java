@@ -6,6 +6,8 @@
 
 package assignment1;
 
+import java.util.Date;
+
 /**
  *
  * @author c0572709
@@ -18,7 +20,16 @@ public class Assignment1 {
     public static void main(String[] args) {
         // TODO code application logic here
     }
-    public void newOrderArrives(Order order){
-        order.getCustomerId();
+    
+    public void newOrderArrives(Order order) throws Exception{
+        if(order.getCustomerId() > 0 && order.getCustomerName() != null ){
+            if(!order.getListOfPurchase().isEmpty()){
+                order.setTimeReceived(new Date());
+            }else{
+                throw new Exception("List of purchase is empty."); 
+            }
+        }else{
+            throw new Exception("Customer id and customer name does not exsist."); 
+        }
     }
 }
