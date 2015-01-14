@@ -18,7 +18,8 @@ public class Order {
     private int customerId;
     private String customerName;
     private Date timeReceived;
-    private Date ticustomerId;
+    private Date timeProcessed;
+    private Date timeFulfilled;
     private List<Purchase> listOfPurchase;
     private String notes;
 

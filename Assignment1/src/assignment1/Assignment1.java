@@ -18,9 +18,14 @@ public class Assignment1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Date date = new Date();
         
-        System.out.println(date.toString());
     }
     
+    public void processOrder(Order o)
+    {
+        if(o.getTimeReceived() == null)
+        {
+            o.setTimeReceived(new Date());
+        }
+    }
 }
