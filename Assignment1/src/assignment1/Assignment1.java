@@ -27,5 +27,9 @@ public class Assignment1 {
         {
             o.setTimeReceived(new Date());
         }
+        else
+        {
+            throw new IllegalStateException("");
+        }
     }
 }
