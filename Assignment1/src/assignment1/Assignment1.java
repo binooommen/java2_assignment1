@@ -6,6 +6,8 @@
 
 package assignment1;
 
+import java.util.Date;
+
 /**
  *
  * @author c0572709
@@ -16,7 +18,14 @@ public class Assignment1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      
+        
+    }
+    public Date nextRequestedOrder(Order orders){
+        if(orders.getTimeReceived()!=null){
+            return null;
+        }
+        return orders.getTimeReceived();
     }
     
 }
