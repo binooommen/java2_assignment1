@@ -18,10 +18,10 @@ public class Order {
     private int customerId;
     private String customerName;
     private Date timeReceived;
-    private Date ticustomerId;
+    private Date timeProcessed;
+    private Date timeFulfilled;
     private List<Purchase> listOfPurchase;
     private String notes;
-
     public Order(int customerId, String customerName) {
         this.customerId = customerId;
         this.customerName = customerName;
@@ -51,12 +51,12 @@ public class Order {
         this.timeReceived = timeReceived;
     }
 
-    public Date getTicustomerId() {
-        return ticustomerId;
+    public Date getTimeProcessed() {
+        return timeProcessed;
     }
 
-    public void setTicustomerId(Date ticustomerId) {
-        this.ticustomerId = ticustomerId;
+    public void setTimeProcessed(Date timeProcessed) {
+        this.timeProcessed = timeProcessed;
     }
 
     public List<Purchase> getListOfPurchase() {
