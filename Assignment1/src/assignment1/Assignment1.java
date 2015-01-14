@@ -6,6 +6,7 @@
 
 package assignment1;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -19,6 +20,27 @@ public class Assignment1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Calendar cald=Calendar.getInstance();
+        
+        System.out.println("Current time is : " + cald.getTime());
+        
+        Date dte= new Date(15, 01, 01);
+        cald.setTime(dte);
+        
+        System.out.println("The set Time: " + cald.getTime());
+        
+        
+        
+        
+      
+        
+    }
+    public Date nextRequestedOrder(Order orders){
+        if(orders.getTimeReceived()!=null){
+            return null;
+        }
+        return orders.getTimeReceived();
     }
     
     public void newOrderArrives(Order order) throws Exception{
@@ -30,6 +52,15 @@ public class Assignment1 {
             }
         }else{
             throw new Exception("Customer id and customer name does not exsist."); 
+    public void processOrder(Order o)
+    {
+        if(o.getTimeReceived() != null)
+        {
+            o.setTimeReceived(new Date());
+        }
+        else
+        {
+            throw new IllegalStateException("ERROR: Time Recieved cannot be null when processing!");
         }
     }
 }
