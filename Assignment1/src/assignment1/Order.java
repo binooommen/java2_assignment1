@@ -22,7 +22,8 @@ public class Order {
     private int customerId;
     private String customerName;
     private Date timeReceived;
-    private Date ticustomerId;
+    private Date timeProcessed;
+    private Date timeFulfilled;
     private List<Purchase> listOfPurchase;
     private String notes;
 
@@ -55,14 +56,6 @@ public class Order {
         this.timeReceived = timeReceived;
     }
 
-    public Date getTicustomerId() {
-        return ticustomerId;
-    }
-
-    public void setTicustomerId(Date ticustomerId) {
-        this.ticustomerId = ticustomerId;
-    }
-
     public List<Purchase> getListOfPurchase() {
         return listOfPurchase;
     }
@@ -78,9 +71,25 @@ public class Order {
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    public Date getTimeProcessed() {
+        return timeProcessed;
+    }
+
+    public void setTimeProcessed(Date timeProcessed) {
+        this.timeProcessed = timeProcessed;
+    }
+
+    public Date getTimeFulfilled() {
+        return timeFulfilled;
+    }
+
+    public void setTimeFulfilled(Date timeFulfilled) {
+        this.timeFulfilled = timeFulfilled;
+    }
+    
+    
     public void addPurchase(Purchase p){
-      listOfPurchase.add(p);
-        
-        
+        listOfPurchase.add(p);
     }
 }

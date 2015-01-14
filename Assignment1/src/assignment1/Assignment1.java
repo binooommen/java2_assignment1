@@ -28,4 +28,15 @@ public class Assignment1 {
         return orders.getTimeReceived();
     }
     
+    public void processOrder(Order o)
+    {
+        if(o.getTimeReceived() != null)
+        {
+            o.setTimeReceived(new Date());
+        }
+        else
+        {
+            throw new IllegalStateException("");
+        }
+    }
 }
