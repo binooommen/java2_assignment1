@@ -14,6 +14,10 @@ import java.util.List;
  * @author c0641048
  */
 public class Order {
+
+    static void add(Order order) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     private int customerId;
     private String customerName;

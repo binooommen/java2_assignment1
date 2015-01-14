@@ -18,7 +18,14 @@ public class Assignment1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+      
         
+    }
+    public Date nextRequestedOrder(Order orders){
+        if(orders.getTimeReceived()!=null){
+            return null;
+        }
+        return orders.getTimeReceived();
     }
     
     public void processOrder(Order o)
