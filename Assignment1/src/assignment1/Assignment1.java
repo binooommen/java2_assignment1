@@ -6,6 +6,9 @@
 
 package assignment1;
 
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  *
  * @author c0572709
@@ -17,6 +20,19 @@ public class Assignment1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Calendar cald=Calendar.getInstance();
+        
+        System.out.println("Current time is : " + cald.getTime());
+        
+        Date dte= new Date(15, 01, 01);
+        cald.setTime(dte);
+        
+        System.out.println("The set Time: " + cald.getTime());
+        
+        
+        
+        
     }
     
 }
