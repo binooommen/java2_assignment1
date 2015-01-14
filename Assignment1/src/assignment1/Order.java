@@ -59,6 +59,14 @@ public class Order {
         this.timeProcessed = timeProcessed;
     }
 
+    public Date getTimeFulfilled() {
+        return timeFulfilled;
+    }
+
+    public void setTimeFulfilled(Date timeFulfilled) {
+        this.timeFulfilled = timeFulfilled;
+    }
+    
     public List<Purchase> getListOfPurchase() {
         return listOfPurchase;
     }
